@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.ds-user-menu__action {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  background-color: #E89A7F;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+
+::ng-deep {
+  .ds-user-menu__panel {
+    width: 168px;
+  }
+
+}

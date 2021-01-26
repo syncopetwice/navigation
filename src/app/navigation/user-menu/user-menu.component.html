@@ -1,0 +1,12 @@
+<div class="slds-grid slds-grid--align-center slds-grid--vertical-align-center ds-user-menu__action">
+  <button mat-icon-button [matMenuTriggerFor]="menu">SA</button>
+  <mat-menu #menu="matMenu" class="ds-menu-panel ds-menu-panel--dark ds-user-menu__panel">
+    <button mat-menu-item >Profile</button>
+    <button mat-menu-item >Admin Console</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item >
+      <mat-icon svgIcon="log-out"></mat-icon>
+      <span>Log out</span>
+    </button>
+  </mat-menu>
+</div>
