@@ -17,13 +17,14 @@ export class IconService {
   public icons: Set<string> = new Set([
     'toggle',
     'history',
-    'project',
+    // 'project',
     'log-out',
     'settings',
     'back'
   ]);
 
   public registerIcons(): void {
+    this.matIconRegistry.setDefaultFontSetClass('material-icons-outlined');
     this.icons.forEach((key) => {
       this.matIconRegistry.addSvgIcon(
         key,

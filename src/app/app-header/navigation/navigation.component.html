@@ -1,0 +1,51 @@
+<mat-nav-list class="ds-list ds-list--inversed">
+  <mat-list-item *ngFor="let route of routes; trackBy: trackById">
+    <mat-icon matListIcon>
+      {{ route.icon }}
+    </mat-icon>
+    <div class="slds-truncate">
+      {{ route.label }}
+    </div>
+  </mat-list-item>
+</mat-nav-list>
+
+<div class="slds-m-vertical--x-small">
+  <mat-divider></mat-divider>
+</div>
+
+<!-- Favourites -->
+<section>
+  <mat-nav-list class="ds-navigation__list ds-list ds-list--inversed">
+    <mat-list-item class="ds-navigation__favorites-item" (click)="handleFavoritesToggle(isFavoritesCollapsed)">
+      <div
+        class="slds-grid slds-grid--vertical-align-center slds-grid--align-spread slds-grow"
+      >
+        <div class="slds-grow ds-navigation__section-heading">Favorites</div>
+        <ng-container [ngSwitch]="isFavoritesCollapsed">
+          <mat-icon *ngSwitchCase="true">expand_more</mat-icon>
+          <mat-icon *ngSwitchCase="false">expand_less</mat-icon>
+        </ng-container>
+      </div>
+    </mat-list-item>
+
+    <div class="slds-grid slds-grid--vertical-align-center slds-p-left--large slds-p-right--medium slds-m-bottom--x-small ds-navigation__favorite-pages-information">
+      <div>Favorite pages by clicking the</div>
+      <mat-icon class="slds-m-left--xx-small ds-navigation__favorite-icon" fontSet="material-icons">star_bordered</mat-icon>
+    </div>
+
+    <ng-container *ngIf="!isFavoritesCollapsed">
+      <mat-list-item *ngFor="let route of favourites; trackBy: trackById">
+        <mat-icon matListIcon>
+          {{ route.icon }}
+        </mat-icon>
+        <div class="slds-truncate">
+          {{ route.label }}
+        </div>
+      </mat-list-item>
+    </ng-container>
+
+  </mat-nav-list>
+</section>
+<!-- / Favourites -->
+
+

@@ -1,6 +1,8 @@
-<ds-navigation class="slds-shrink-none"></ds-navigation>
-<mat-drawer-container class="slds-grow">
-  <mat-drawer mode="side" opened class="ds-app__drawer">Drawer content</mat-drawer>
+<ds-app-header></ds-app-header>
+<mat-drawer-container class="slds-no-space">
+  <mat-drawer mode="side" opened class="ds-app__drawer">
+    <ds-navigation></ds-navigation>
+  </mat-drawer>
   <mat-drawer-content>
     <router-outlet></router-outlet>
   </mat-drawer-content>

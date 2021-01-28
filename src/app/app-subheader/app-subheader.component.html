@@ -1,0 +1,54 @@
+<!-- Sub Navigation -->
+<div
+  class="slds-grid slds-grid--vertical-align-center slds-p-right--large slds-no-space ds-navigation__sub"
+>
+  <!-- Title -->
+  <div
+    class="slds-p-left--medium slds-grid slds-grid--vertical-align-center slds-no-space ds-navigation__subnav-title-container"
+  >
+    <button
+      type="button"
+      mat-button
+      (click)="handleBackAction()"
+      class="ds-navigation__return-action"
+    >
+      <div class="slds-grid slds-grid--vertical-align-center">
+        <mat-icon class="slds-shrink-none ds-navigation__sub-return-icon slds-m-right--xx-small">arrow_back</mat-icon>
+        <div class="slds-truncate ds-navigation__sub-title">Projects</div>
+      </div>
+    </button>
+  </div>
+  <!-- / Title -->
+
+  <!-- Tabs && Settings -->
+  <div
+    class="slds-m-left--small slds-grid slds-grid--align-spread slds-grid--vertical-align-center slds-no-space slds-grow"
+  >
+    <!-- Tabs -->
+    <div class="slds-shrink-none">
+      <mat-tab-group class="ds-tabs ds-tabs--inversed">
+        <mat-tab label="Summary"></mat-tab>
+        <mat-tab label="Plans"></mat-tab>
+        <mat-tab label="Schedules"></mat-tab>
+      </mat-tab-group>
+    </div>
+    <!-- / Tabs -->
+
+    <!-- Settings -->
+    <button
+      type="button"
+      mat-icon-button
+      class="ds-navigation__settings-action"
+    >
+      <mat-icon
+        class="ds-navigation__settings-action-icon"
+
+      >
+        settings</mat-icon
+      >
+    </button>
+    <!-- / Settings -->
+  </div>
+  <!-- / Tabs && Settings -->
+</div>
+<!-- / Sub Navigation -->

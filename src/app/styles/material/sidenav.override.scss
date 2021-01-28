@@ -1,0 +1,13 @@
+.mat-drawer-inner-container {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #465053;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #C7CED0;
+    border-radius: 4px;
+  }
+}

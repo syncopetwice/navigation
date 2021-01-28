@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+.ds-history__trigger-action {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.ds-history__trigger-icon {
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-navigation__history-label {
+  color: #C7CED0;
+  font-size: 14px;
+  margin-left: 6px;
+}

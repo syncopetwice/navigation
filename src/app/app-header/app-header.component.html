@@ -1,0 +1,76 @@
+<div
+  #nav
+  class="slds-grid slds-grid--align-spread slds-grid--vertical-align-center slds-no-space slds-p-right--large ds-navigation__header"
+>
+  <!-- Logotype & Global Sidebar Toggle & History Menu & Page Title -->
+  <div class="slds-grid slds-grid--vertical-align-center slds-no-space">
+    <!-- Logotype & Global Sidebar Toggle & History Menu -->
+    <div
+      class="slds-grid slds-grid--vertical-align-center slds-no-space ds-navigation__logotype-and-toggle-and-history-container"
+    >
+      <!-- Logotype & Global Sidebar Toggle -->
+      <div
+        class="slds-grow slds-grid slds-grid--vertical-align-center slds-grid--align-spread slds-no-space slds-p-left--medium slds-p-right--small ds-navigation__logotype-and-toggle-container"
+
+      >
+        <!-- Logotype  -->
+        <button
+          mat-button
+          type="button"
+          class="slds-shrink-none ds-navigation__logotype-action"
+        >
+          <img
+            src="assets/images/logotype.svg"
+            alt="Design Schedule Logotype"
+            width="90"
+            height="24"
+            class="slds-shrink-none ds-navigation__logotype"
+          />
+        </button>
+        <!-- / Logotype  -->
+
+        <!-- Global Sidebar Toggle -->
+        <button
+          type="button"
+          mat-icon-button
+          (click)="handleSidebarToggle()"
+          class="slds-shrink-none ds-navigation__sidebar-toggle-action"
+        >
+          <mat-icon
+            class="ds-navigation__sidebar-toggle-action-icon"
+            svgIcon="toggle"
+          ></mat-icon>
+        </button>
+        <!-- / Global Sidebar Toggle -->
+      </div>
+      <!-- / Logotype & Global Sidebar Toggle -->
+
+      <!-- History Menu -->
+      <div
+        class="slds-shrink-none slds-grid slds-grid--align-center slds-grid--vertical-align-center ds-navigation__history"
+      >
+        <ds-history></ds-history>
+      </div>
+      <!-- / History Menu -->
+    </div>
+    <!-- / Logotype & Global Sidebar Toggle & History Menu -->
+
+    <!-- Page Title -->
+    <div
+      class="slds-m-left--small slds-grid slds-grid--vertical-align-center slds-no-space"
+    >
+      <mat-icon class="slds-shrink-none">layers</mat-icon>
+      <div class="slds-m-left--x-small slds-truncate ds-navigation__page-title">
+        9890-Steve’s Grand Home Project
+      </div>
+    </div>
+    <!-- / Page Title -->
+  </div>
+  <!-- Logotype & Global Sidebar Toggle & History Menu & Page Title -->
+
+  <!-- User Menu -->
+  <ds-user-menu class="slds-m-left--x-large"></ds-user-menu>
+  <!-- / User Menu -->
+</div>
+
+<ds-app-subheader></ds-app-subheader>

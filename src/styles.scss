@@ -10,15 +10,24 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
+
+@import '~@angular/material/theming';
+
+@include mat-core(mat-typography-config(
+  $font-family: 'Open Sans',
+));
 
 @import '../node_modules/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.css';
 
 
 :root {
-  --navigation-sidebar-width: 336px;
+  --global-sidebar-width: 224px;
+  --local-sidebar-width: 336px;
 }
 
-@import './app/styles/material/menu.material.override.scss';
-@import './app/styles/material/tabs.material.override.scss';
+@import './app/styles/material/menu.override.scss';
+@import './app/styles/material/tabs.override.scss';
+@import './app/styles/material/sidenav.override.scss';
+@import './app/styles/material/list.override.scss';
