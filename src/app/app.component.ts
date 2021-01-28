@@ -30,7 +30,6 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.portal$ = this.portalService.portal$;
-    this.cdr.detectChanges();
   }
 
 }

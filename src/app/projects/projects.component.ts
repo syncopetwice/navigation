@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
-export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
+export class ProjectsComponent implements OnInit, OnDestroy {
   constructor(private portalService: PortalService, private router: Router) {}
 
   @ViewChild(CdkPortal, { static: true })
@@ -24,7 +24,6 @@ export class ProjectsComponent implements OnInit, OnDestroy, AfterViewInit {
     this.portalService.set(this.portal);
   }
 
-  public ngAfterViewInit(): void {}
   public ngOnDestroy(): void {
     this.portal.detach();
   }
