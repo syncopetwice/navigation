@@ -1,20 +1,25 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
+import { CdkPortal } from '@angular/cdk/portal';
+
+export enum Slot {
+  Drawer,
+  Subheader,
+}
 
 @Injectable({
   providedIn: 'root',
 })
 export class PortalService {
-  constructor(public zone: NgZone) {}
+  constructor() {}
 
-  private current = new Subject<TemplatePortal | ComponentPortal<any>>();
+  public portals: Map<Slot, CdkPortal> = new Map()
+    .set(Slot.Drawer, new Subject())
+    .set(Slot.Subheader, new Subject());
 
-  readonly portal$ = this.current.asObservable();
-
-  set(portal: TemplatePortal | ComponentPortal<any>): void {
+  set(slot: Slot, portal: CdkPortal): void {
     Promise.resolve(null).then(() => {
-      this.current.next(portal);
+      this.portals.set(slot, portal);
     });
   }
 }

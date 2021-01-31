@@ -1,9 +1,13 @@
 <ds-app-header></ds-app-header>
-<mat-drawer-container class="slds-no-space" style="height: 100%;">
-  <mat-drawer mode="side" opened class="ds-app__drawer">
-    <ng-container [cdkPortalOutlet]="portal$ | async"></ng-container>
+
+<mat-drawer-container class="slds-no-space app__drawer-container">
+
+  <mat-drawer mode="side" [opened]="true" class="ds-app__drawer">
+    <!-- <ng-container [cdkPortalOutlet]="portal$ | async"></ng-container> -->
   </mat-drawer>
+
   <mat-drawer-content>
     <router-outlet></router-outlet>
   </mat-drawer-content>
+
 </mat-drawer-container>

@@ -24,7 +24,6 @@ export class AppHeaderComponent implements OnInit {
   public handleSidebarToggle(): void {
     this.fixedTopGap = this.navigation.nativeElement.offsetHeight || DEFAULT_SIDEBAR_HEIGHT;
     this.isNavigationOpened = !this.isNavigationOpened;
-    console.log('x', this.fixedTopGap);
     this.onSidenavTrigger.emit({
       isOpened: this.isNavigationOpened,
       fixedToTopGap: this.fixedTopGap

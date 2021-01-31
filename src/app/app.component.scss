@@ -4,11 +4,14 @@
   min-height: 100vh;
 }
 
+.app__drawer-container {
+  height: calc(100vh - var(--app-header-height) - var(--app-subheader-height));
+}
+
 .ds-app__drawer {
   width: var(--local-sidebar-width);
   background-color: #465053;
 }
-
 
 .ds-navigation__sidenav {
   width: var(--global-sidebar-width);

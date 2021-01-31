@@ -1,24 +1,19 @@
-import { Component, OnInit,  ChangeDetectorRef } from '@angular/core';
-import { ComponentPortal, TemplatePortal } from '@angular/cdk/portal';
-import { NavigationComponent } from './app-header/navigation/navigation.component';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { ComponentPortal } from '@angular/cdk/portal';
+import { PortalService, Slot } from './portal.service';
 import { Observable } from 'rxjs';
-import { PortalService } from './portal.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
-
-  constructor(
-    public portalService: PortalService,
-    private cdr: ChangeDetectorRef
-  ) {}
+export class AppComponent implements OnInit, AfterViewInit {
+  constructor(public portalService: PortalService) {}
 
   public drawer!: ComponentPortal<any>;
 
-  public portal$!: Observable<TemplatePortal | ComponentPortal<any>>;
+  public portal!: any;
 
   public isNavigationOpened: boolean = false;
   public fixedToTopGap: number = 0;
@@ -29,7 +24,9 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.portal$ = this.portalService.portal$;
+    console.log('Portal', this.portal);
+    this.portal = this.portalService.portals.get(Slot.Drawer);
   }
 
+  public ngAfterViewInit(): void {}
 }

@@ -1,34 +1,19 @@
-import {
-  Component,
-  ViewChild,
-  OnDestroy,
-  OnInit,
-  AfterViewInit,
-} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { PortalService, Slot } from '../portal.service';
 import { CdkPortal } from '@angular/cdk/portal';
-import { PortalService } from '../portal.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
-export class ProjectsComponent implements OnInit, OnDestroy {
-  constructor(private portalService: PortalService, private router: Router) {}
+export class ProjectsComponent implements OnInit {
+  constructor(private portalService: PortalService) {}
 
-  @ViewChild(CdkPortal, { static: true })
-  public portal!: CdkPortal;
+  @ViewChild(CdkPortal, { static: true }) public portal!: CdkPortal;
 
   public ngOnInit(): void {
-    this.portalService.set(this.portal);
-  }
-
-  public ngOnDestroy(): void {
-    this.portal.detach();
-  }
-
-  public route(): void {
-    this.router.navigate(['transactions']);
+    console.log('Portal', this.portal);
+    this.portalService.set(Slot.Drawer, this.portal);
   }
 }

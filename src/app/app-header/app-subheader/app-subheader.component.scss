@@ -3,7 +3,7 @@
 }
 
 .app-subheader__sub {
-  height: 40px;
+  height: var(--app-subheader-height);
   background-color: #5D6A6E;
 }
 

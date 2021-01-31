@@ -1,0 +1,21 @@
+@import "../../../node_modules/@salesforce-ux/design-system/scss/init";
+
+#{$reset-wrapping-class} {
+  @import "../../../node_modules/@salesforce-ux/design-system/scss/vendor/normalize-reset";
+
+  @include core($scoped: true, $globals: true);
+
+  @import "../../../node_modules/@salesforce-ux/design-system/scss/utilities/grid/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/alignment/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/margin/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/padding/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/floats/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/truncation/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/hyphenation/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/text/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/scrollable/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/sizing/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/position/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/visibility/index",
+    "../../../node_modules/@salesforce-ux/design-system/scss/utilities/line-clamp/index";
+}

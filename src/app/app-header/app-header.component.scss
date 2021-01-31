@@ -4,7 +4,7 @@
 }
 
 .app-header__header {
-  height: 48px;
+  height: var(--app-header-height);
   background-color: #465053;
   color: #FFF;
 }
