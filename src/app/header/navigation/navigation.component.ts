@@ -81,7 +81,7 @@ export class NavigationComponent implements OnInit {
     })
   ];
 
-  public favourites: Route[] = [...this.routes].splice(0, 3);
+  public favourites: Route[] = [];
 
   public isFavoritesCollapsed: boolean = false;
 

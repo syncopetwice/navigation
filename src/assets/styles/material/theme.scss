@@ -1,0 +1,17 @@
+
+@import "../../../../node_modules/@angular/material/theming";
+@include mat-core(mat-typography-config($font-family: "Open Sans"));
+
+$ds-primary: mat-palette($mat-indigo);
+$ds-accent:  mat-palette($mat-pink, A200, A100, A400);
+$ds-warn:    mat-palette($mat-red);
+
+$ds-theme: mat-light-theme((
+  color: (
+    primary: $ds-primary,
+    accent: $ds-accent,
+    warn: $ds-warn,
+  )
+));
+
+@include angular-material-theme($ds-theme);

@@ -1,41 +1,18 @@
-@import './assets/styles/variables.scss';
+@import "./assets/styles/variables.scss";
+@import "./assets/styles/slds.scss";
+@import "./assets/styles/material/ds.scss";
 
-html {
-  font-family: 'Open Sans', sans-serif;
-}
-
-html,
-body {
+html.ds {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-width: var(--app-min-width);
+  min-height: 100vh;
   background-color: #F9F9F9;
-  padding: 0;
-  margin: 0;
+
+  body {
+    margin: 0;
+    font: 400 14px/20px 'Open Sans';
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  display: block;
-}
-
-li {
-  margin-left: 0;
-}
-
-fieldset legend {
-  font-weight: normal;
-}
-
-@import './assets/styles/slds.scss';
-@import '~@angular/material/theming';
-
-@include mat-core(mat-typography-config(
-  $font-family: 'Open Sans',
-));
-
-@import './assets/styles/material/index.scss';
+@import "./assets/styles/material/index.scss";

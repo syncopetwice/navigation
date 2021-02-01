@@ -16,7 +16,10 @@
 <!-- Favourites -->
 <section>
   <mat-nav-list class="ds-navigation__list ds-list ds-list--inversed">
-    <mat-list-item class="ds-navigation__favorites-item" (click)="handleFavoritesToggle(isFavoritesCollapsed)">
+    <mat-list-item
+      class="ds-navigation__favorites-item"
+      (click)="handleFavoritesToggle(isFavoritesCollapsed)"
+    >
       <div
         class="slds-grid slds-grid--vertical-align-center slds-grid--align-spread slds-grow"
       >
@@ -28,9 +31,16 @@
       </div>
     </mat-list-item>
 
-    <div class="slds-grid slds-grid--vertical-align-center slds-p-left--large slds-p-right--medium slds-m-bottom--x-small ds-navigation__favorite-pages-information">
+    <div
+      class="slds-grid slds-grid--vertical-align-center slds-p-left--large slds-p-right--medium slds-m-bottom--x-small ds-navigation__favorite-pages-information"
+    >
       <div>Favorite pages by clicking the</div>
-      <mat-icon class="slds-m-left--xx-small ds-navigation__favorite-icon" fontSet="material-icons">star_bordered</mat-icon>
+      <mat-icon
+        class="slds-m-left--xx-small ds-navigation__favorite-icon"
+        fontSet="material-icons"
+        >
+        star_bordered
+      </mat-icon>
     </div>
 
     <ng-container *ngIf="!isFavoritesCollapsed">
@@ -43,9 +53,6 @@
         </div>
       </mat-list-item>
     </ng-container>
-
   </mat-nav-list>
 </section>
 <!-- / Favourites -->
-
-

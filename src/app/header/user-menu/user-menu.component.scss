@@ -2,7 +2,7 @@
   display: block;
 }
 
-.user-menu__action {
+.ds-user-menu__action {
   width: 32px;
   height: 32px;
   border: 1px solid #FFF;
@@ -13,12 +13,12 @@
   color: #fff;
 }
 
-.user-menu__project-settings-heading {
+.ds-user-menu__project-settings-heading {
   color: #909DA1;
 }
 
 ::ng-deep {
-  .user-menu__panel {
+  .ds-user-menu__panel {
     width: 168px;
   }
 }

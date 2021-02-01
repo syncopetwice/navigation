@@ -1,21 +1,18 @@
 :host {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: block;
 }
 
-.app__drawer-container {
+.ds-app__sidenav {
+  width: var(--global-sidenav-width);
+  padding-top: var(--app-subheader-height);
+  background-color: #465053;
+}
+
+.ds-app__drawer-container {
   height: calc(100vh - var(--app-header-height) - var(--app-subheader-height));
 }
 
 .ds-app__drawer {
-  width: var(--local-sidebar-width);
-  background-color: #465053;
-}
-
-.ds-navigation__sidenav {
-  width: var(--global-sidebar-width);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  width: var(--global-drawer-width);
   background-color: #465053;
 }

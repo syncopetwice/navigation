@@ -1,13 +1,21 @@
-.mat-drawer-inner-container {
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: #465053;
+.ds-sidenav {
+  .mat-drawer-inner-container {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #465053;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #C7CED0;
+      border-radius: 4px;
+    }
+
+    overflow-x: hidden;
+
+    scrollbar-color: #c7ced0 #465053;
+
   }
 
-  &::-webkit-scrollbar-thumb {
-    background-color: #C7CED0;
-    border-radius: 4px;
-  }
 }

@@ -1,13 +1,38 @@
-<ds-app-header></ds-app-header>
+<!-- Header -->
+<ds-header></ds-header>
+<!-- / Header -->
 
-<mat-drawer-container class="slds-no-space app__drawer-container">
-
-  <mat-drawer mode="side" [opened]="true" class="ds-app__drawer">
-    <!-- <ng-container [cdkPortalOutlet]="portal$ | async"></ng-container> -->
-  </mat-drawer>
-
-  <mat-drawer-content>
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-
-</mat-drawer-container>
+<!-- Global Sidenav Container -->
+<mat-sidenav-container>
+  <!-- Sidenav -->
+  <mat-sidenav
+    [opened]="headerService.isSidenavOpened"
+    (closedStart)="headerService.toggle(true)"
+    fixedInViewport
+    [fixedTopGap]="headerService.gap"
+    class="ds-sidenav ds-app__sidenav slds-p-bottom--large"
+  >
+  </mat-sidenav>
+  <!-- / Sidenav -->
+  <!-- Sidenav Content-->
+  <mat-sidenav-content>
+    <!-- Drawer Container -->
+    <mat-drawer-container class="slds-no-space ds-app__drawer-container">
+      <!-- Drawer -->
+      <mat-drawer mode="side" opened class="ds-drawer ds-app__drawer">
+        <!-- <ng-container [cdkPortalOutlet]="portal$ | async"></ng-container> -->
+      </mat-drawer>
+      <!-- / Drawer -->
+      <!-- Drawer Content -->
+      <mat-drawer-content class="ds-drawer-content">
+        <!-- Router Outlet -->
+        <router-outlet></router-outlet>
+        <!-- / Router Outlet -->
+      </mat-drawer-content>
+      <!-- / Drawer Content -->
+    </mat-drawer-container>
+    <!-- / Drawer Container -->
+  </mat-sidenav-content>
+  <!-- / Sidenav Content-->
+</mat-sidenav-container>
+<!-- / Global Sidenav Container -->

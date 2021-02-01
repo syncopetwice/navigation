@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { ComponentPortal } from '@angular/cdk/portal';
-import { PortalService, Slot } from './portal.service';
-import { Observable } from 'rxjs';
+import { PortalService } from './portal.service';
+import { HeaderService } from './header/header.service';
 
 @Component({
   selector: 'app-root',
@@ -9,24 +8,10 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  constructor(public portalService: PortalService) {}
+  constructor(public portalService: PortalService, public headerService: HeaderService) {}
 
-  public drawer!: ComponentPortal<any>;
-
-  public portal!: any;
-
-  public isNavigationOpened: boolean = false;
-  public fixedToTopGap: number = 0;
-
-  public handleSidenavToggle(ev: any): void {
-    this.isNavigationOpened = ev.isOpened;
-    this.fixedToTopGap = ev.fixedToTopGap;
-  }
-
-  public ngOnInit(): void {
-    console.log('Portal', this.portal);
-    this.portal = this.portalService.portals.get(Slot.Drawer);
-  }
+  public ngOnInit(): void {}
 
   public ngAfterViewInit(): void {}
+
 }

@@ -1,20 +1,22 @@
 <!-- Sub Navigation -->
 <div
-  class="slds-grid slds-grid--vertical-align-center slds-p-right--large slds-no-space app-subheader__sub"
+  class="slds-grid slds-grid--vertical-align-center slds-p-right--large slds-no-space ds-subheader"
 >
   <!-- Title -->
   <div
-    class="slds-p-left--medium slds-grid slds-grid--vertical-align-center slds-no-space app-subheader__subnav-title-container"
+    class="slds-p-left--medium slds-grid slds-grid--vertical-align-center slds-no-space ds-subheader__title-container"
   >
     <button
       type="button"
       mat-button
       (click)="handleBackAction()"
-      class="app-subheader__return-action"
+      class="ds-subheader__return-action"
     >
       <div class="slds-grid slds-grid--vertical-align-center">
-        <mat-icon class="slds-shrink-none app-subheader__sub-return-icon slds-m-right--xx-small">arrow_back</mat-icon>
-        <div class="slds-truncate app-subheader__sub-title">Projects</div>
+        <mat-icon class="slds-shrink-none ds-subheader__return-action-icon slds-m-right--xx-small">
+          arrow_back
+        </mat-icon>
+        <div class="slds-truncate ds-subheader__title">Projects</div>
       </div>
     </button>
   </div>
@@ -24,10 +26,6 @@
   <div
     class="slds-m-left--small slds-grid slds-grid--align-spread slds-grid--vertical-align-center slds-no-space slds-grow"
   >
-
-
-    <ng-container [cdkPortalOutlet]="portal$ | async"></ng-container>
-
     <!-- Tabs -->
     <div class="slds-shrink-none">
       <mat-tab-group class="ds-tabs ds-tabs--inversed">
@@ -42,14 +40,12 @@
     <button
       type="button"
       mat-icon-button
-      class="app-subheader__settings-action"
+      class="ds-subheader__settings-action"
     >
       <mat-icon
-        class="app-subheader__settings-action-icon"
-
-      >
-        settings</mat-icon
-      >
+        class="ds-subheader__settings-action-icon">
+        settings
+      </mat-icon>
     </button>
     <!-- / Settings -->
   </div>

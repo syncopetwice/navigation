@@ -4,11 +4,11 @@ import { TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
 import { PortalService, Slot } from 'src/app/portal.service';
 
 @Component({
-  selector: 'ds-app-subheader',
-  templateUrl: './app-subheader.component.html',
-  styleUrls: ['./app-subheader.component.scss']
+  selector: 'ds-subheader',
+  templateUrl: './subheader.component.html',
+  styleUrls: ['./subheader.component.scss']
 })
-export class AppSubheaderComponent implements OnInit {
+export class SubheaderComponent implements OnInit {
 
   constructor(
     private portalService: PortalService
