@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
@@ -14,15 +15,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { PortalModule } from '@angular/cdk/portal';
 
-import { HttpClientModule } from '@angular/common/http';
 import { IconService } from './icon.service';
-import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProjectsComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

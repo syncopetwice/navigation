@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
-import { PortalService, Slot } from 'src/app/portal.service';
 
 @Component({
   selector: 'ds-subheader',
@@ -10,15 +7,9 @@ import { PortalService, Slot } from 'src/app/portal.service';
 })
 export class SubheaderComponent implements OnInit {
 
-  constructor(
-    private portalService: PortalService
-  ) { }
+  constructor() { }
 
-  public portal$!: Observable<TemplatePortal | ComponentPortal<any>>;
-
-  ngOnInit(): void {
-    // this.portal$ = this.portalService.portals.get(Slot.Drawer);
-  }
+  ngOnInit(): void {}
 
   public handleBackAction(): void {}
 

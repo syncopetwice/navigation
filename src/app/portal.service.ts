@@ -2,24 +2,18 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { CdkPortal } from '@angular/cdk/portal';
 
-export enum Slot {
-  Drawer,
-  Subheader,
-}
-
 @Injectable({
   providedIn: 'root',
 })
 export class PortalService {
+
+  public drawer: Subject<CdkPortal> = new Subject<CdkPortal>();
+  readonly drawer$ = this.drawer.asObservable();
+
+  public setDrawerPortal(portal: CdkPortal): void {
+    this.drawer.next(portal);
+  }
+
   constructor() {}
 
-  public portals: Map<Slot, CdkPortal> = new Map()
-    .set(Slot.Drawer, new Subject())
-    .set(Slot.Subheader, new Subject());
-
-  set(slot: Slot, portal: CdkPortal): void {
-    Promise.resolve(null).then(() => {
-      this.portals.set(slot, portal);
-    });
-  }
 }

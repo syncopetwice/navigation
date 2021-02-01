@@ -8,10 +8,12 @@ import { HeaderService } from './header/header.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  constructor(public portalService: PortalService, public headerService: HeaderService) {}
+  constructor(
+    public portalService: PortalService,
+    public headerService: HeaderService
+  ) {}
 
   public ngOnInit(): void {}
 
   public ngAfterViewInit(): void {}
-
 }

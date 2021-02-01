@@ -20,7 +20,7 @@
     <mat-drawer-container class="slds-no-space ds-app__drawer-container">
       <!-- Drawer -->
       <mat-drawer mode="side" opened class="ds-drawer ds-app__drawer">
-        <!-- <ng-container [cdkPortalOutlet]="portal$ | async"></ng-container> -->
+        <ng-container [cdkPortalOutlet]="portalService.drawer$ | async"></ng-container>
       </mat-drawer>
       <!-- / Drawer -->
       <!-- Drawer Content -->
