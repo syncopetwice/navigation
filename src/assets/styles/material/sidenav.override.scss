@@ -1,3 +1,9 @@
+.ds-sidenav-container {
+  .mat-drawer-backdrop.mat-drawer-shown {
+    background-color: transparent;
+  }
+}
+
 .ds-sidenav {
   .mat-drawer-inner-container {
     &::-webkit-scrollbar {

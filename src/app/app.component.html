@@ -1,9 +1,5 @@
-<!-- Header -->
-<ds-header></ds-header>
-<!-- / Header -->
-
 <!-- Global Sidenav Container -->
-<mat-sidenav-container>
+<mat-sidenav-container class="ds-sidenav-container">
   <!-- Sidenav -->
   <mat-sidenav
     [opened]="headerService.isSidenavOpened"
@@ -12,15 +8,21 @@
     [fixedTopGap]="headerService.gap"
     class="ds-sidenav ds-app__sidenav slds-p-bottom--large"
   >
+    <ds-navigation></ds-navigation>
   </mat-sidenav>
   <!-- / Sidenav -->
   <!-- Sidenav Content-->
   <mat-sidenav-content>
+    <!-- Header -->
+    <ds-header></ds-header>
+    <!-- / Header -->
     <!-- Drawer Container -->
     <mat-drawer-container class="slds-no-space ds-app__drawer-container">
       <!-- Drawer -->
       <mat-drawer mode="side" opened class="ds-drawer ds-app__drawer">
-        <ng-container [cdkPortalOutlet]="portalService.drawer$ | async"></ng-container>
+        <ng-container
+          [cdkPortalOutlet]="portalService.drawer$ | async"
+        ></ng-container>
       </mat-drawer>
       <!-- / Drawer -->
       <!-- Drawer Content -->
